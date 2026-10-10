@@ -1,62 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" 
-    content="width=device-width,
-     initial-scale=1.0"/>
-     <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;500;600;700&display=swap"
-     rel="stylesheet"><!--This loads Inter, a clean font used by many websites-->
-    <title>NEXT Website</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <script type="module" src="https://unpkg.com/ionicons@8.0.13
-    /dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@8.0.13/
-dist/ionicons/ionicons.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlateShare - Food Donation Network</title>
+  <meta name="description" content="PlateShare connects food donors with NGOs to reduce waste and feed communities.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <!--Navbar Section-->
+
   <nav class="navbar">
-  <div class="navbar__container">
-  <a href="/" id="navbar__logo"><ion-icon name="earth" style="color:
-  rgb(107, 34, 34);"></ion-icon>  PlateShare</a>
-  <div class="navbar__toggle" id="mobile-menu">
-    <span class="bar"></span><span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-  <ul class="navbar__menu">
-    <li class="navbar__item">
-        <a href="/" class="navbar__links">Home</a>
-    </li>
-    <li class="navbar__item">
-        <a href="donor.html" class="navbar__links">DONOR Portal</a>
-    </li>
-    <li class="navbar__item">
-        <a href="ngo.html" class="navbar__links">NGO Portal</a>
-    </li>
-    <li class="navbar__btn"><a href="/"
-         class="button">Sign Up</a></li>
-  </ul>
-  </div>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-box"><ion-icon name="heart"></ion-icon></div>
+        <div>Plate<span>Share</span></div>
+      </a>
+
+      <button class="menu-btn" id="menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+        <li><a href="donor.html"><ion-icon name="add-circle-outline"></ion-icon> Donor Portal</a></li>
+        <li><a href="ngo.html"><ion-icon name="search-outline"></ion-icon> NGO Portal</a></li>
+      </ul>
+    </div>
   </nav>
 
-<!--Hero Section-->
-<div class="main">
-    <div class="main__container">
-        <div class="main__content">
-            <h1>Good food belongs with people, not landfills.</h1>
-            <p>PlateShare connects food donors with local NGOs in 
-                minutes.Post surplus, claim what your community needs, 
-                and keep perfectly good food on the table. </p>
-                <button class="main__btn"><a href="donor.html">Donate Food</a></button>
-                <button class="main__btn1"><a href="ngo.html">Find Food</a></button>
+  <!-- hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="live-pill">
+          <span class="dot"></span>
+          <span id="live-count">0</span> donations available now
         </div>
-        <div class="main__img--container">
-            <img src="my-photo.jpg" alt="pic" id="main__img">
-        </div>
-    </div>
-</div>
 
+        <h1>Good food belongs with <span class="green">people</span>, not landfills.</h1>
+        <p>PlateShare connects food donors with local NGOs in minutes. Post surplus, claim what your community needs, and keep perfectly good food on the table.</p>
+
+        <div class="hero-btns">
+          <a href="donor.html" class="btn btn-green">Donate food <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          <a href="ngo.html" class="btn btn-white">Find food <ion-icon name="search-outline"></ion-icon></a>
+        </div>
+        <small>No sign-up needed to explore. Try both portals right now.</small>
+      </div>
+
+      <div class="hero-img-wrap">
+        <img src="fooddonation02.jpeg" alt="Volunteers handing out food">
+        <div class="stat-card">
+          <div class="stat-icon"><ion-icon name="leaf-outline"></ion-icon></div>
+          <div>
+            <b id="claimed-today">0</b>
+            <span>donations claimed today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- how it works -->
+  <section class="section">
+    <div class="container">
+      <h2>How PlateShare works</h2>
+      <p class="sub">Three simple steps move surplus food from where it is to where it's needed most.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="icon-box g"><ion-icon name="add-circle-outline"></ion-icon></div>
+          <h3>Donors post surplus</h3>
+          <p>Caterers, hotels, messes and event organizers list food they can't use, with the quantity and a pickup deadline.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="icon-box o"><ion-icon name="search-outline"></ion-icon></div>
+          <h3>NGOs discover it</h3>
+          <p>Organizations browse the available donations and filter by category and how much time is left.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="icon-box b"><ion-icon name="hand-left-outline"></ion-icon></div>
+          <h3>Claim and collect</h3>
+          <p>One click reserves the listing so nobody else takes it. Then the NGO picks it up before the food expires.</p>
+        </div>
+      </div>
+
+      <div class="portal-cards">
+        <a href="donor.html" class="portal-card">
+          <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+          <div class="icon-box g"><ion-icon name="add-circle-outline"></ion-icon></div>
+          <h3>Donor Portal</h3>
+          <p>List surplus food in under a minute. Set the quantity, category and when it needs to be picked up.</p>
+        </a>
+        <a href="ngo.html" class="portal-card orange">
+          <ion-icon name="arrow-forward-outline" class="arrow"></ion-icon>
+          <div class="icon-box o"><ion-icon name="search-outline"></ion-icon></div>
+          <h3>NGO Portal</h3>
+          <p>Browse live donations, filter by category, see the time remaining and claim what your community needs.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    PlateShare &copy; 2026. A second year AIDS engineering project.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
   <script src="app.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
